@@ -1,0 +1,797 @@
+@import 'colors'
+@import 'fontello'
+/* CUSTOM STYLE =============================================*/
+
+
+
+body
+ overflow-x: hidden
+ margin: 0
+ padding: 0
+ font-family: 'Open Sans', sans-serif
+ color: $black
+
+input, textarea
+ outline: none
+ color: $white
+ font-size: 14px
+ padding-left: 2%
+ 
+
+.input::placeholder
+ opacity: 1
+ transition: opacity 0.3s ease
+ color: $white
+ padding-left: 2%
+ font-size: 18px
+ font-weight: 400
+ line-height: 30px
+ letter-spacing: 0.9px
+
+.input:focus::placeholder
+ opacity: 0
+ transition: opacity 0.3s ease
+
+
+h1
+ color: $white
+ font-family: 'Open Sans', sans-serif 
+ font-size: 48px
+ font-weight: 400
+ // line-height: 72px
+ letter-spacing: 2.4px
+p
+ // color: $white
+ // font-family: "PT Sans - Caption"
+ font-family: 'Open Sans', sans-serif 
+ font-size: 24px
+ font-weight: 400
+ // line-height: 36px
+ letter-spacing: 1.2px
+
+a
+ text-decoration: none
+ color: $black
+ font-family: 'Open Sans', sans-serif
+
+
+// font-family: 'Exo 2', sans-serif;
+
+/* font-family: 'Open Sans', sans-serif; */
+
+/* BUTTONS */
+
+.btn
+ border: 2px solid $white
+ padding: 5px 20px 5px 20px
+ color: $white
+ font-size: 18px
+ font-weight: 400
+ line-height: 48px
+ letter-spacing: 0.9px
+
+.btn-primary
+ width: 240px
+ height: 66px
+ border-radius: 15px
+ background-color: $one
+ text-align: center
+ color: $white
+ font-size: 26px
+ font-weight: 700
+ line-height: 60px
+ letter-spacing: 1.8px
+ &:hover
+  background-color: lighten($one, 5%)
+
+.btn-sm
+ margin-top: 20px
+ width: auto
+ background: $active
+ border: none
+ padding: 17px 20px
+ border-radius: 15px
+ color: $white
+ font-size: 14px
+ font-weight: 400
+ letter-spacing: 0.7px
+ &:hover
+  cursor: pointer
+  background: darken($active, 10%)
+
+/* Nice scroll Bar */
+
+#ascrail2000-hr
+ display: none!important
+
+
+/*HEADER =============================================*/
+
+.header
+ padding-bottom: 90px
+ background: url(../img/bg-header.png) no-repeat center top
+ background-size: cover
+ &-content
+  margin-bottom: 68px
+  h1
+   text-align: center
+   margin-top: 150px
+   margin-bottom: 51px
+  p
+   text-align: center
+   padding: 0 120px
+   margin-bottom: 0
+   color: $white
+ &-objects
+  padding: 0 165px
+ &-item
+  positon: relative
+  width: 252px
+  height: 160px
+  border: 2px solid $white
+  border-top: 2px solid transparent
+  text-align: center
+  margin-right: 59px
+  padding: 0
+  &::before
+   content: " "
+   position: absolute
+   top: -2px
+   left: -2px
+   border-top: 2px solid $white
+   display: block
+   width: 40%
+   height: 2px
+  &::after
+   content: " "
+   position: absolute
+   top: -2px
+   left: 138px
+   border-top: 2px solid $white
+   display: block
+   width: 40%
+   height: 2px
+  &:last-child
+   margin-right: 0
+  i
+   position: absolute
+   top: -11%
+   left: calc(50% - 22px)
+   font-size: 34px
+   width: 36px
+   color: $white
+  h1
+   font-weight: 700
+   margin: 0
+   margin-top: 30px
+  p
+   margin: 0
+   color: $white
+   font-size: 18px
+   line-height: 36px
+   letter-spacing: 0.9px
+
+/* MENU ============================================= */
+
+.menu
+ height: 10vh
+ margin-bottom: 200px
+ .pop-up
+  display: none
+ // span
+ //  display: none
+ // i
+ //  display: none
+ ul
+  padding: 35px 80px 37px 0
+  border-bottom: 2px solid lighten($black, 68%)
+  margin: 0
+  li
+   list-style: none
+   margin-right: 40px
+   z-index: 99
+  a
+   font-size: 30px
+   font-weight: 400
+   line-height: 30px
+   letter-spacing: 1.5px
+   &:hover
+    color: $active
+
+
+/* ABOUT ============================================= */
+
+.about
+ .container-fluid
+  padding: 0
+ &-content
+  padding-left: 128px
+  padding-right: 50px
+  position: relative
+  h1
+   color: $black
+   margin-right: 170px
+   font-weight: 700
+   line-height: 30px
+   letter-spacing: 2.4px
+  p
+   color: $black
+   margin: 0
+   z-index: 99
+   opacity: 0.8
+   font-size: 20px
+   font-weight: 400
+   line-height: 30px
+   letter-spacing: 1px
+   width: 100%
+   height: 100%
+  .bg-about
+   position: absolute
+   left: 32%
+   z-index: 1
+   h1
+    font-weight: 700
+    opacity: 0.19
+    color: $grey
+    font-size: 340px
+    line-height: 30px
+    text-transform: uppercase
+    letter-spacing: 17px
+    margin: 0
+ &-items
+  margin-top: 140px
+  margin-bottom: 100px
+ &-item
+  padding: 0
+  margin-right: 70px
+  margin-left: 70px
+  &:nth-child(2)
+   margin-left: 0
+   margin-right: 70px
+  &:last-child
+   margin-left: 0
+   margin-right: 0
+  &__block
+   width: 120%
+   display: flex
+   flex-direction: column
+   padding: 20px
+   transition: all 0.3s
+   height: 100%
+   position: relative
+   &:hover
+    background-color: $active
+    transition: all 0.3s
+   h2
+    color: $black
+    font-size: 20px
+    font-weight: 700
+    line-height: 25.57px
+    letter-spacing: 1.2px
+   p
+    width: auto
+    color: $black
+    font-size: 13px
+    font-weight: 400
+    line-height: 25.57px
+    letter-spacing: 0.9px
+    margin: 0
+   .button
+    margin-top: 26px
+    display: flex
+    align-items: flex-end
+    flex: 1
+    height: 100%
+   .arrow
+    position: absolute
+    right: 10%
+    bottom: 10%
+
+/* DEVELOPMENT */
+
+.development
+ height: 80vh
+ margin-bottom: 500px
+ max-heght: 566px
+ background: url(../img/development/bg-development.png) no-repeat center
+ // background-size: 100%
+ position: relative
+ &-block
+  &__content
+   display: flex
+   flex-direction: column
+   align-items: center
+   margin-top: 50px
+   margin-bottom: 330px
+   h1
+    margin-top: 30px
+    margin-bottom: 30px
+    color: $white
+    font-family: "Exo 2"
+    font-size: 50px
+    font-weight: 700
+    line-height: 48px
+    letter-spacing: 2.5px
+    text-transform: uppercase
+   p
+    text-align: center
+    margin-top: 0
+    color: $white
+    font-size: 24px
+    font-weight: 400
+    line-height: 36px
+    letter-spacing: 1.2px
+   img
+    position: absolute
+    width: auto
+    height: auto
+    left: 0
+    bottom: -20%
+    z-index: 0
+   h2
+    position: absolute
+    left: 3%
+    bottom: 7%
+    color: $white
+    font-size: 50px
+    font-weight: 400
+    line-height: 30px
+    letter-spacing: 2.5px
+  &__service
+   display: flex
+   margin-bottom: 100px
+   position: relative
+   padding: 0
+   margin-right: 15px
+   &:last-child
+    margin-right: 0
+   .heading
+    position: absolute
+    top: 0
+    left: 10%
+    color: $white
+    font-size: 51px
+    font-weight: 700
+    line-height: 48.53px
+    text-transform: uppercase
+    letter-spacing: 2.5px
+    .bottom
+     .btn
+      padding: 15px 29px
+      margin-right: 30px
+      font-size: 24px
+      font-weight: 400
+      line-height: 40px
+      letter-spacing: 1.2px
+      &-1
+       border: 2px solid $blue
+       transition: all 0.3s
+       &:hover
+        transition: all 0.3s
+        background-color: $blue
+      &-2
+       border: 2px solid $yellow
+       transition: all 0.3s
+       &:hover
+        transition: all 0.3s
+        background-color: $yellow
+      &-3
+       border: 2px solid $green
+       transition: all 0.3s
+       &:hover
+        transition: all 0.3s
+        background-color: $green
+    .neo
+     margin-bottom: 85px
+    hr
+     width: 260px
+     height: 1px
+     background-color: $white
+     margin: 0
+     margin-bottom: 47px 
+
+/* SEARCH */
+
+.search
+ margin-top: 600px
+ margin-bottom: 70px
+ &-content
+  position: relative
+  padding: 0
+  h1
+   z-index: 99
+   position: absolute
+   top: 4%
+   left: -10%
+   opacity: 0.19
+   color: $black
+   font-size: 75px
+   font-weight: 700
+   line-height: 33.15px
+   text-transform: uppercase
+   letter-spacing: 3.6px
+   margin: 0
+  h2
+   margin: 0
+   margin-top: 5px
+   color: $black
+   font-size: 36px
+   font-weight: 700
+   line-height: 72px
+   letter-spacing: 1.8px
+   text-transform: uppercase
+  p
+   margin: 0
+   color: $black
+   font-size: 19px
+   font-weight: 400
+   line-height: 45px
+   letter-spacing: 1.2px
+ &-logo
+  img
+   padding: 0
+   margin-bottom: 40px
+
+
+/* PORTFOLIO */
+
+.portfolio
+ margin-bottom: 200px
+ &-heading
+  height: 130px
+  background: $separetor
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  .display-1
+   margin: 0
+   opacity: 0.34
+   color: $two
+   font-size: 96px
+   font-weight: 700
+   line-height: 60.23px
+   text-transform: uppercase
+   letter-spacing: 2.4px
+   z-index: 0
+  h2
+   margin: 0
+   position: absolute
+   bottom: 16%
+   color: $white
+   font-size: 36px
+   font-weight: 700
+   line-height: 72px
+   letter-spacing: 1.8px
+ &-img
+  margin: 0
+  padding: 0
+  img
+   width: 100%
+   height: 100%
+ &-signature
+  position: relative
+  &__block
+   position: absolute
+   left: calc(26% - 10px)
+   bottom: 30%
+  h1
+   color: $white
+   font-family: "Exo 2"
+   font-size: 72px
+   font-weight: 600
+   line-height: 30px
+   letter-spacing: 3.6px
+   margin: 0
+  p
+   color: $white
+   font-family: "Exo 2"
+   font-size: 30px
+   font-weight: 600
+   line-height: 30px
+   letter-spacing: 1.5px
+
+/* RESPONSIVENESS */
+
+.responsive
+ margin-bottom: 170px
+ &-content
+  position: relative
+  padding: 0
+  h1
+   z-index: 99
+   position: absolute
+   top: 5%
+   left: -12%
+   opacity: 0.19
+   color: $black
+   font-size: 80px
+   font-weight: 700
+   line-height: 33.15px
+   text-transform: uppercase
+   letter-spacing: 3.6px
+   margin: 0
+  h2
+   margin: 0
+   margin-top: 5px
+   color: $black
+   font-size: 36px
+   font-weight: 700
+   line-height: 72px
+   letter-spacing: 1.8px
+   text-transform: uppercase
+  p
+   margin: 0
+   margin-top: 19px
+   color: $black
+   font-size: 20px
+   font-weight: 400
+   line-height: 44px
+   letter-spacing: 1.2px
+  .hidden
+   display: none
+ &-items
+  padding: 0
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  width: auto
+  height: auto
+  img
+   height: auto
+ &-hidden
+  display: none
+
+    
+/* TRADE-IN */
+
+.tradein
+ background: url(../img/trade-in/bg-tradein.png) no-repeat center top
+ background-size: 100%
+ padding-bottom: 100px
+ margin-bottom: 50px
+ &-heading
+  display: flex
+  justify-content: center
+  h1
+   margin: 0
+   margin-top: 50px
+   color: $white
+   font-size: 48px
+   line-height: 72px
+   text-transform: uppercase
+   letter-spacing: 2.4px
+   font-weight: 700
+ &-item
+  display: flex
+  flex-direction: column
+  padding: 0
+  margin: 0 auto
+  height: 100%
+  &:last-child
+   margin-top: 0
+   margin-right: 50px
+  p
+   margin: 0
+   color: $white
+   font-size: 14px
+   font-weight: 400
+   line-height: 26px
+   letter-spacing: 0.9px
+ &-block
+  flex: 1
+  height: 100%
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: flex-start
+  h1
+   margin: 0
+   margin-left: 20px
+   color: $white
+   font-size: 20px
+   font-weight: 400
+   line-height: 72px
+   letter-spacing: 1.5px
+
+
+/* CARE */
+.care
+ margin-bottom: 100px
+ &-left
+  padding-right: 40px
+ &-right
+  padding: 0
+
+/*  FEEDBACK  */
+
+.feedback
+ background: url(../img/feedback/bg-feedback.png) no-repeat center top
+ background-size: cover
+ padding-bottom: 100px
+ padding-top: 50px
+ display: flex
+ align-items: center
+ &-right
+  h2
+   margin-bottom: 28px
+   margin-top: 0
+   color: $white
+   font-size: 30px
+   font-weight: 400
+   line-height: 72px
+   letter-spacing: 1.5px
+  p
+   color: $white
+   font-size: 18px
+   font-weight: 400
+   line-height: 27px
+   letter-spacing: 0.9px
+ &-form
+  padding: 0
+  margin-left: 50px
+  form
+   display: flex
+   flex-direction: column
+   justify-content: flex-end
+   width: 614px
+   height: 340px
+  &__submit
+   display: flex
+   justify-content: flex-end
+   p
+    color: $white
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.7px
+    margin-right: 10%
+  &__field
+   display: flex
+   .form-control
+    border: 4px solid $white
+    width: 50%
+    height: 50px
+    background-color: transparent
+    &:last-child
+     border-left: none
+   .form-email
+    border: 4px solid $white
+    border-top: none
+    width: 100%
+    height: 50px
+    background-color: transparent
+   textarea
+    box-sizing: border-box
+    min-height: 150px
+    overflow: hidden
+    padding-top: 2%
+    width: 100%
+    max-height: 200px	
+    resize: none
+    background-color: transparent
+    border: 4px solid $white
+    border-top: none
+
+
+/* FOOTER */
+
+.footer
+ background-color: $active
+ height: auto
+ &-icons
+  display: flex
+  justify-content: center
+  align-items: center
+  ul
+   padding: 0
+   list-style: none
+   display: flex
+   li
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 10px
+    border: 2px solid $white
+    border-radius: 50%
+    height: 60px
+    width: 60px
+    &:hover
+     border-color: $active
+     background: $white
+     transition: all 0.5s
+    &:hover i
+     color: $active
+     transition: all 0.5s
+    a
+     i
+      font-size: 30px
+      line-height: 40px
+      color: $white
+
+
+/* OVERLAY_NAV */
+
+.overlay-nav
+ display: none
+ position: fixed
+ width: 100%
+ height: 100vh
+ left: 0
+ top: 0
+ background-color: rgba(0,0,0,0.8)
+ z-index: 999
+ .close-nav
+  position: fixed
+  right: 3%
+  top: 2.7%
+  width: 30px
+  height: 30px
+  &:hover
+   cursor: pointer
+  i
+   color: darken($white, 20%)
+   font-size: 25px
+   &:hover
+    color: $white
+ ul
+  padding: 0
+  padding-top: 10%
+  line-height: 2.5
+  text-align: center
+  list-style: none
+  li
+   a
+    z-index: 999
+    display: block
+    transition: all 0.3s
+    color: darken($white, 10%)
+    font-size: 36px
+    &:hover
+     color: $black
+     background-color: $white
+    
+
+@import 'media'
+
+
+
+    
+
+
+
+
+   
+
+
+
+
+   	
+ 
+
+   
+   
+   
+
+   
+   
+   
+  	
+  	
+   
+  	
+
+   
+   	
+
+
+
+
+
+
+
+
+
+
+ 
+
