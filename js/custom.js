@@ -9,8 +9,6 @@ $(function(){
         } else {
             $('.menu')
             .removeClass('menu-fixed animated fadeInUp')
-
-            $('.pop-up')
             .addClass('animated fadeInDown')
         }
     });

@@ -300,7 +300,10 @@ a {
   height: 10vh;
   margin-bottom: 200px;
 }
-.menu .pop-up {
+.menu span {
+  display: none;
+}
+.menu i {
   display: none;
 }
 .menu ul {
@@ -2097,13 +2100,13 @@ a {
     background: #2ecc71;
     z-index: 999;
   }
+  .menu-fixed ul {
+    border: none;
+  }
   .menu-fixed span, .menu-fixed i {
     color: #fff;
   }
-  .menu .pop-up {
-    display: block;
-  }
-  .menu .pop-up span {
+  .menu span {
     display: block;
     position: absolute;
     left: calc(50% - 30px);
@@ -2112,7 +2115,7 @@ a {
     font-size: 20px;
     font-weight: 600;
   }
-  .menu .pop-up i {
+  .menu i {
     display: block;
     position: absolute;
     right: 8%;
@@ -2120,10 +2123,11 @@ a {
     font-size: 20px;
     z-index: 99;
   }
-  .menu .pop-up i:hover {
+  .menu i:hover {
     cursor: pointer;
   }
   .menu ul {
+    display: none;
     padding: 20px 0px;
   }
   .menu ul li {
